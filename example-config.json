@@ -1,0 +1,16 @@
+{
+    "canvas":{
+        "access_token": "xxxx",
+	"host": "canvas.docker",
+	"username": "xxx",
+	"password": "xxx"
+    },
+    
+    "diva":{
+	"host": "kth.test.diva-portal.org",
+	"username": "xxxx",
+	"password": "xxxxx"
+    }
+    
+
+}

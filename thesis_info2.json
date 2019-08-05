@@ -1,0 +1,122 @@
+{
+    "Author1":{
+	"Last name": "Maguire Jr.",
+	"First name": "Gerald Q.",
+	"Local User Id": "u1d13i2c",
+	"Research group": "CCS",
+	"E-mail": "maguire@kth.se",
+	"organisation": {"L1": "School of Information and Communication Technology (ICT)",
+			 "L2": "Communication Systems, CoS"
+			}
+    },
+    "Author2":{
+	"Last name": "Noz",
+	"First name": "Marilyn E.",
+	"E-mail": "men@bogus.org",
+	"Other organisation": "NYU"
+    },
+
+    "Cooperation":{
+	"Partner_name": "ABBBBA"
+    },
+    "Title":{
+	"Main title": "This is a long title in English",
+	    "Subtitle": "This is an even longer subtitle in English"
+    },
+    "Alternative title":{
+	"Main title": "Detta är en lång titel på svenska",
+	    "Subtitle": "Detta är en ännu längre undertexter på svenska"
+
+    },
+    "Degree":{
+	"Level": "M2",
+	"University credits": "10",
+	"Educational program": "9990",
+	"Subject_course": "10339"
+    },
+    "Content category":{
+    },
+    "Other information":{
+	"Year": "2019",
+	"Number of pages": "xiii,72"
+    },
+    "Series":{
+	"Title of series": "5952",
+	"No. in series": "2019:00"
+    },
+    "Other series":{
+	"Title of series": "",
+	"ISSN": "",
+	"EISSN": "",
+	"No. in series": ""
+    },
+    "Identifiers":{
+	"ISRN": "",
+	"DOI": "",
+	"DOI_Free_full_text": "",
+	"URL": "",
+	"URL label": "",
+	"URL_Free_full_text": ""
+    },
+    "National subject category":{
+    },
+    "Part of project":{
+    },
+    "Part of other project":{
+	"Project_name": ""
+    },
+    "Keywords1":{
+	"Keywords": "Fee,Foo,Fum"
+    },
+    "Keywords2":{
+	"Keywords": "Fåå,Fää,Fööm"
+    },
+
+    "Abstract1":{
+	"Abstract":	"<p>This is a abstract for an non existant thesis about F<sup>18</sup></p>"
+    },
+    "Abstract2":{
+	"Abstract":	"<p>Detta är ett abstrakt för en icke-existerande avhandling om F<sup>18</sup></p>"
+    },
+    "Supervisor1":{
+	"Last name": "Västberg",
+	"First name": "Anders",
+	"Academic title": "universitetslektor",
+	"Local User Id": "u1ft3a12",
+	"Research group": "RS",
+	"ORCiD": "0000-0002-4226-9652",
+	"E-mail": "vastberg@kth.se",
+	"organisation": "unknown"
+    },
+    "Supervisor2":{
+	"Last name": "Normal",
+	"First name": "A. B.",
+	"E-mail": "ABNormal@example.org",
+	"organisation": "unknown",
+	"Other organisation": "Famous Anvils"
+    },
+    "Examiner1":{
+	"Last name": "Maguire Jr.",
+	"First name": "Gerald Q.",
+	"Academic title": "professor",
+	"Local User Id": "u1d13i2c",
+	"ORCiD": "0000-0002-6066-746X",
+	"Research group": "CCS",
+	"E-mail": "maguire@kth.se",
+	"organisation": "unknown"
+    },
+    "Presentation":{
+	"Date": "2019-07-25 4:31",
+	"Language": "eng",
+	"Room": "Seminar room Grimeton at COM",
+	"Address": "Kistagången 16, East, Floor 4, Elevator B",
+	"City": "Kista"
+    },
+    "Note" :{
+	"Note": "<p><span style='color: red;'>A completely bogus entry for testing with Puppeteer.</span></p>"
+    },
+    "File" :{
+	"Filename": "/home/maguire/Diva/z1.pdf"
+    }
+
+}

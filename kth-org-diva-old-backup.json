@@ -1,0 +1,179 @@
+{
+    "Centres": {
+	"ID": "organisationPopupForm:tree-d-0",
+	"Nordic Institute for Theoretical Physics NORDITA": {"ID": "organisationPopupForm:tree-d-0-0"},
+	"Science for Life Laboratory, SciLifeLab": {
+	    "ID": "organisationPopupForm:tree-d-0-1",
+	    "KTH Center for Applied Proteomics (KCAP)": {"ID": "organisationPopupForm:tree-d-0-1-0"}
+	},
+	"SeRC - Swedish e-Science Research Centre": {"ID": "organisationPopupForm:tree-d-0-2"},
+	"XPRES, Excellence in production research": {"ID": "organisationPopupForm:tree-d-0-3"}
+    },
+    "School of Architecture and the Built Environment (ABE)": {
+	"ID": "organisationPopupForm:tree-d-1",
+	"Architecture": {"ID": "organisationPopupForm:tree-d-1-0"},
+	"Centres": {"ID": "organisationPopupForm:tree-d-1-1"},
+	"Civil and Architectural Engineering": {"ID": "organisationPopupForm:tree-d-1-2"},
+	"Philosophy and History": {"ID": "organisationPopupForm:tree-d-1-3"},
+	"Real Estate and Construction Management": {"ID": "organisationPopupForm:tree-d-1-4"},
+	"Sustainable development, Environmental science and Engineering": {"ID": "organisationPopupForm:tree-d-1-5"},
+	"Transport Science": {"ID": "organisationPopupForm:tree-d-1-6"},
+	"Urban Planning and Environment": {"ID": "organisationPopupForm:tree-d-1-7",
+					   "Geodesy and Satellite Positioning": {"ID": "organisationPopupForm:tree-d-1-7-0"},
+					   "Geoinformatics": {"ID": "organisationPopupForm:tree-d-1-7-1"},
+					   "Urban and Regional Studies": {"ID": "organisationPopupForm:tree-d-1-7-2"}
+					  }
+    },
+    "School of Biotechnology (BIO)": {
+	"ID": "organisationPopupForm:tree-d-2",
+	"Centres": {"ID": "organisationPopupForm:tree-d-2-0",
+		    "Albanova VinnExcellence Center for Protein Technology, ProNova": {"ID": "organisationPopupForm:tree-d-2-0-1"},
+		    "Centre of Computational Molecular and Systems Biology, CMB": {"ID": "organisationPopupForm:tree-d-2-0-2"},
+		    "KTH Center for Applied Proteomics (KCAP)": {"ID": "organisationPopupForm:tree-d-2-0-3"},
+		    "KTH Genome Center": {"ID": "organisationPopupForm:tree-d-2-0-5"},
+		    "KTH-USTC Joint Center for Bio- and Nano-Materials": {"ID": "organisationPopupForm:tree-d-2-0-6"},
+		    "Swedish Center for Biomimetic Fiber Engineering, BioMime": {"ID": "organisationPopupForm:tree-d-2-0-7"}
+		   },
+	"Gene Technology": {"ID": "organisationPopupForm:tree-d-2-1"},
+	"Glycoscience": {"ID": "organisationPopupForm:tree-d-2-2"},
+	"Industrial Biotechnology": {"ID": "organisationPopupForm:tree-d-2-3"},
+	"Protein Technology": {"ID": "organisationPopupForm:tree-d-2-4"},
+	"Proteomics and Nanobiotechnology": {"ID": "organisationPopupForm:tree-d-2-5"},
+	"Theoretical Chemistry and Biology": {"ID": "organisationPopupForm:tree-d-2-6"}
+    },
+    "School of Chemical Science and Engineering (CHE)":
+    {
+	"ID": "organisationPopupForm:tree-d-3",
+	"Centres": {"ID": "organisationPopupForm:tree-d-3-0",
+		    "Biofibre Materials Centre, BiMaC": {"ID": "organisationPopupForm:tree-d-3-0-0"},
+		    "Centre for Fuel Cells in a Sustainable Society": {"ID": "organisationPopupForm:tree-d-3-0-1"},
+		    "Centre for Surfactants based on Natural bProducts, SNAP": {"ID": "organisationPopupForm:tree-d-3-0-2"},
+		    "Centre of Molecular Devices, CMD": {"ID": "organisationPopupForm:tree-d-3-0-3"},
+		    "Industrial NMR Centre": {"ID": "organisationPopupForm:tree-d-3-0-4"},
+		    "Swedish Center for Biomimetic Fiber Engineering, BioMime": {"ID": "organisationPopupForm:tree-d-3-0-5"},
+		    "Wallenberg Wood Science Center": {"ID": "organisationPopupForm:tree-d-3-0-6"}
+		   },
+	"Chemical Engineering and Technology": {"ID": "organisationPopupForm:tree-d-3-1",
+					       	"Applied Electrochemistry": {"ID": "organisationPopupForm:tree-d-3-1-0"},
+						"Chemical Engineering": {"ID": "organisationPopupForm:tree-d-3-1-1"},
+						"Chemical Reaction Engineering": {"ID": "organisationPopupForm:tree-d-3-1-2"},
+						"Chemical Technology": {"ID": "organisationPopupForm:tree-d-3-1-3"},
+						"Energy Processes": {"ID": "organisationPopupForm:tree-d-3-1-4"},
+						"Transport Phenomena": {"ID": "organisationPopupForm:tree-d-3-1-5"}
+					       },
+	"Chemistry": {"ID": "organisationPopupForm:tree-d-3-2",
+		      "Applied Physical Chemistry": {"ID": "organisationPopupForm:tree-d-3-2-0"},
+		      "Organic Chemistry": {"ID": "organisationPopupForm:tree-d-3-2-1"},
+		      "Surface and Corrosion Science": {"ID": "organisationPopupForm:tree-d-3-2-2"},
+		      "Fibre and Polymer Technology": {"ID": "organisationPopupForm:tree-d-3-3",
+						       "Biocomposites": {"ID": "organisationPopupForm:tree-d-3-3-0"},
+						       "Coating Technology": {"ID": "organisationPopupForm:tree-d-3-3-1"},
+						       "Fibre Technology": {"ID": "organisationPopupForm:tree-d-3-3-2"},
+						       "Paper Technology": {"ID": "organisationPopupForm:tree-d-3-3-3"},
+						       "Polymer Technology": {"ID": "organisationPopupForm:tree-d-3-3-4"},
+						       "Polymeric Materials": {"ID": "organisationPopupForm:tree-d-3-3-5"},
+						       "Wood Chemistry and Pulp Technology": {"ID": "organisationPopupForm:tree-d-3-3-6"}
+						      }
+		     }
+    },
+    "School of Computer Science and Communication (CSC)": {
+	"ID": "organisationPopupForm:tree-d-4",
+	"Centres": {"ID": "organisationPopupForm:tree-d-4-0"},
+	"Computational Science and Technology (CST)": {"ID": "organisationPopupForm:tree-d-4-1"},
+	"Media Technology and Interaction Design, MID": {"ID": "organisationPopupForm:tree-d-4-2"},
+	"Robotics, perception and learning, RPL": {"ID": "organisationPopupForm:tree-d-4-3"},
+	"Speech, Music and Hearing, TMH": {"ID": "organisationPopupForm:tree-d-4-4",
+					   "Music Acoustics": {"ID": "organisationPopupForm:tree-d-4-4-0"},					   
+					   "Speech Communication and Technology": {"ID": "organisationPopupForm:tree-d-4-4-1"}
+					  },
+	"Theoretical Computer Science, TCS": {"ID": "organisationPopupForm:tree-d-4-5"}
+    },
+    "School of Education and Communication in Engineering Science (ECE)": {
+	"ID": "organisationPopupForm:tree-d-5",
+	"Learning": {"ID": "organisationPopupForm:tree-d-5-0",
+		     "House of Science": {"ID": "organisationPopupForm:tree-d-5-0-0"},
+		     "Language and communication": {"ID": "organisationPopupForm:tree-d-5-0-1"},
+		     "Learning in Engineering Sciences": {"ID": "organisationPopupForm:tree-d-5-0-2"},
+		     "Organisation and leadership": {"ID": "organisationPopupForm:tree-d-5-0-3"},
+		     "Technology for learning": {"ID": "organisationPopupForm:tree-d-5-0-4"}
+		    },
+	"Library": {"ID": "organisationPopupForm:tree-d-5-1",
+		    "Library Services and Learning Support": {"ID": "organisationPopupForm:tree-d-5-1-0"},
+		    "Media and IT": {"ID": "organisationPopupForm:tree-d-5-1-1"},
+		    "Publication Infrastructure": {"ID": "organisationPopupForm:tree-d-5-1-2"}
+		   }
+    },
+    "School of Electrical Engineering (EES)": {
+	"ID": "organisationPopupForm:tree-d-6",
+	"Automatic Control": {"ID": "organisationPopupForm:tree-d-6-0"},
+	"Centres": {"ID": "organisationPopupForm:tree-d-6-1",
+		    "ACCESS Linnaeus Centre": {"ID": "organisationPopupForm:tree-d-6-1-0"},
+		    "Alfv&eacute;n Laboratory Centre for Space and Fusion Plasma Physics": {"ID": "organisationPopupForm:tree-d-6-1-1"},
+		    "Swedish Centre of Excellence in Electric Power Engineering, EKC2": {"ID": "organisationPopupForm:tree-d-6-1-2"}
+		   },
+	"Communication Networks": {"ID": "organisationPopupForm:tree-d-6-2"},
+	"Communication Theory": {"ID": "organisationPopupForm:tree-d-6-3"},
+	"Electric power and energy systems": {"ID": "organisationPopupForm:tree-d-6-4"},
+	"Electromagnetic Engineering": {"ID": "organisationPopupForm:tree-d-6-5"},
+	"Fusion Plasma Physics": {"ID": "organisationPopupForm:tree-d-6-6"},
+	"Micro and Nanosystems": {"ID": "organisationPopupForm:tree-d-6-7"},
+	"Signal Processing": {"ID": "organisationPopupForm:tree-d-6-8"},
+	"Space and Plasma Physics": {"ID": "organisationPopupForm:tree-d-6-9"}
+    },
+    "School of Engineering Sciences (SCI)": {
+	"ID": "organisationPopupForm:tree-d-7",
+	"Aeronautical and Vehicle Engineering": {"ID": ""},
+	"Applied Physics": {"ID": "organisationPopupForm:tree-d-7-1"},
+	"Centres": {"ID": "organisationPopupForm:tree-d-7-2"},
+	"Mathematics (Dept.)": {"ID": "organisationPopupForm:tree-d-7-3"},
+	"Mechanics": {"ID": "organisationPopupForm:tree-d-7-4"},
+	"Physics": {"ID": "organisationPopupForm:tree-d-7-5"}
+    },
+    "School of Industrial Engineering and Management (ITM)": {
+	"ID": "organisationPopupForm:tree-d-8",
+	"Applied Mechanical Engineering (KTH S&ouml;dert&auml;lje)": {"ID": "organisationPopupForm:tree-d-8-0"},
+	"Centres": {"ID": "organisationPopupForm:tree-d-8-1"},
+	"Energy Technology": {"ID": "organisationPopupForm:tree-d-8-2"},
+	"Industrial Economics and Management (Dept.)": {"ID": "organisationPopupForm:tree-d-8-3"},
+	"Machine Design (Dept.)": {"ID": "organisationPopupForm:tree-d-8-4"},
+	"Materials Science and Engineering": {"ID": "organisationPopupForm:tree-d-8-5"},
+	"Production Engineering": {"ID": "organisationPopupForm:tree-d-8-6",
+				   "Computer Systems for Design and Manufacturing": {"ID": "organisationPopupForm:tree-d-8-6-0"},
+				   "Machine and Process Technology": {"ID": "organisationPopupForm:tree-d-8-6-1"},
+				   "Materials Forming": {"ID": "organisationPopupForm:tree-d-8-6-2"},
+				   "Metrology and Optics": {"ID": "organisationPopupForm:tree-d-8-6-3"},
+				   "Production Systems": {"ID": "organisationPopupForm:tree-d-8-6-4"},
+				   "Welding Technology": {"ID": "organisationPopupForm:tree-d-8-6-5"}
+				  }
+    },
+    "School of Technology and Health (STH)": {
+	"ID": "organisationPopupForm:tree-d-10",
+	"Basic Science and Biomedicine": {"ID": "organisationPopupForm:tree-d-10-0"},
+	"Centres": {"ID": "organisationPopupForm:tree-d-10-1"},
+	"Health Systems Engineering": {"ID": "organisationPopupForm:tree-d-10-2"},
+	"Medical Engineering": {"ID": "organisationPopupForm:tree-d-10-3"}
+    },
+    "School of Information and Communication Technology (ICT)": {
+	"ID": "organisationPopupForm:tree-d-9",
+	"Centres": {"ID": "organisationPopupForm:tree-d-9-0",
+		    "Center for Wireless Systems, Wireless@kth": {"ID": "organisationPopupForm:tree-d-9-0-0"},
+		    "Centre for Cognitive Science and Information Technology": {"ID": "organisationPopupForm:tree-d-9-0-1"},
+	    	    "Electrum Laboratory, ELAB": {"ID": "organisationPopupForm:tree-d-9-0-2"}
+		   },
+	"Communication Systems, CoS": {"ID": "organisationPopupForm:tree-d-9-1",
+				       "Mobile Service Laboratory (MS Lab)": {"ID": "organisationPopupForm:tree-d-9-1-0"},
+				       "Network Systems Laboratory (NS Lab)": {"ID": "organisationPopupForm:tree-d-9-1-1"},
+	    			       "Optical Network Laboratory (ON Lab)": {"ID": "organisationPopupForm:tree-d-9-1-2"},
+				       "Radio Systems Laboratory (RS Lab)": {"ID": "organisationPopupForm:tree-d-9-1-3"}
+				      },
+	"Computer and Systems Sciences, DSV": {"ID": "organisationPopupForm:tree-d-9-2"},
+	"Electronics and Embedded Systems": {"ID": "organisationPopupForm:tree-d-9-3"},
+	"Industrial and Medical Electronics": {"ID": "organisationPopupForm:tree-d-9-4"},
+	"Integrated Devices and Circuits": {"ID": "organisationPopupForm:tree-d-9-5"},
+	"Materials- and Nano Physics": {"ID": "organisationPopupForm:tree-d-9-6"}
+    },
+    "Superseded Departments": {
+	"ID": "organisationPopupForm:tree-d-11"
+    }
+}
+

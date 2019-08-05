@@ -1,0 +1,132 @@
+{
+    "Author1":{
+	"Last name": "Maguire Jr.",
+	"First name": "Gerald Q.",
+	"Local User Id": "u1d13i2c",
+	"Research group": "CCS",
+	"E-mail": "maguire@kth.se",
+	"organisation": {"L1": "School of Computer Science and Communication (CSC)",
+			 "L2": "Theoretical Computer Science, TCS"
+			}
+    },
+    "Author2":{
+	"Last name": "Noz",
+	"First name": "Marilyn E.",
+	"E-mail": "men@bogus.org",
+	"Other organisation": "NYU"
+    },
+
+    "Cooperation":{
+	"Partner_name": "ABBBBA"
+    },
+    "Title":{
+	"Main title": "This is a long title in English",
+	"Subtitle": "This is an even longer subtitle in English",
+	"Language": "eng"	
+    },
+    "Alternative title":{
+	"Main title": "Detta är en lång titel på svenska",
+	"Subtitle": "Detta är en ännu längre undertexter på svenska",
+	"Language": "swe"
+    },
+    "Degree":{
+	"Level": "Independent thesis Basic level (degree of Bachelor)",
+	"University credits": "15 HE credits",
+	"Educational program": "Bachelor of Science in Engineering - Computer Engineering",
+	"Subject_course": "Communications Systems"
+    },
+    "Content category":{
+    },
+    "Other information":{
+	"Year": "2019",
+	"Number of pages": "xiii,72"
+    },
+    "Series":{
+	"Title of series": "TRITA-ICT-EX",
+	"No. in series": "2019:00"
+    },
+    "Other series":{
+	"Title of series": "",
+	"ISSN": "",
+	"EISSN": "",
+	"No. in series": ""
+    },
+    "Identifiers":{
+	"ISRN": "",
+	"DOI": "",
+	"DOI_Free_full_text": "",
+	"URL": "",
+	"URL label": "",
+	"URL_Free_full_text": ""
+    },
+    "National subject category":{
+	"L1": "Engineering and Technology",
+	"L2": "Electrical Engineering, Electronic Engineering, Information Engineering",
+	"L3": "Communication Systems"
+    },
+    "Part of project":{
+    },
+    "Part of other project":{
+	"Project_name": ""
+    },
+    "Keywords1":{
+	"Keywords": "Fiddle,Fee,Foo,Fum",
+	"Language": "eng"
+    },
+    "Keywords2":{
+	"Keywords": "Faddle,Fåå,Fää,Fööm",
+	"Language": "swe"
+    },
+    "Abstract1":{
+	"Abstract":	"<p>This is a abstract for an non existant thesis about <sup>18</sup>F<sup>-</sup></p>",
+	"Language": "eng"
+    },
+    "Abstract2":{
+	"Abstract":	"<p>Detta är ett abstrakt för en icke-existerande avhandling om <sup>18</sup>F<sup>-</sup></p>",
+	"Language": "swe"
+    },
+    "Supervisor1":{
+	"Last name": "Västberg",
+	"First name": "Anders",
+	"Academic title": "universitetslektor",
+	"Local User Id": "u1ft3a12",
+	"Research group": "RS",
+	"ORCiD": "0000-0002-4226-9652",
+	"E-mail": "vastberg@kth.se",
+	"organisation": {"L1": "School of Information and Communication Technology (ICT)",
+			 "L2": "Communication Systems, CoS",
+			 "L3": "Radio Systems Laboratory (RS Lab)"}
+    },
+    "Supervisor2":{
+	"Last name": "Normal",
+	"First name": "A. B.",
+	"E-mail": "ABNormal@example.org",
+	"Other organisation": "Famous Anvils"
+    },
+    "Examiner1":{
+	"Last name": "Maguire Jr.",
+	"First name": "Gerald Q.",
+	"Academic title": "professor",
+	"Local User Id": "u1d13i2c",
+	"ORCiD": "0000-0002-6066-746X",
+	"Research group": "CCS",
+	"E-mail": "maguire@kth.se",
+	"organisation": {"L1": "School of Electrical Engineering (EES)",
+			 "L2": "Communication Networks"
+			}
+    },
+    "Presentation":{
+	"Date": "2019-07-25 4:31",
+	"Language": "eng",
+	"Room": "Seminar room Grimeton at COM",
+	"Address": "Kistagången 16, East, Floor 4, Elevator B",
+	"City": "Kista"
+    },
+    "Note" :{
+	"Note": "<p><span style='color: red;'>A completely bogus entry for testing with Puppeteer using diva5.js</span></p>"
+    },
+    "File" :{
+	"Filename": "/home/maguire/Diva/z1.pdf"
+    }
+
+}
