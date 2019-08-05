@@ -25,10 +25,12 @@ if (verboseGQM) {
     console.log("thesis_info is ", thesis_info);
 }
     
-// for(let key in thesis_info) {
-//     let value = thesis_info[key];
-//     console.info("thesis_info[", key, "] is ", value);
-// }
+if (verboseGQM) {
+    for(let key in thesis_info) {
+	let value = thesis_info[key];
+	console.info("thesis_info[", key, "] is ", value);
+    }
+}
 
 // Viewport && Window size
 const width = 1280
@@ -36,10 +38,21 @@ const height = 900
 
 // const delay = ms => new Promise(res => setTimeout(res, ms));
 
+let kth_org;
+let nationalSubjectCategory;
 
 // KTH organisationPopupForm:tree:n-root:j_id198
-const kth_org = require('./kth-org-diva-old.json'); // organizattion tree
-const nationalSubjectCategory =  require('./National_subject_categories-old.json');
+// and National Subject Category tree
+if (config.diva.host.includes('.test')) {
+    console.info("Configuring for test instance of DiVA")
+    kth_org = require('./kth-org-diva-old.json'); // organization tree
+    nationalSubjectCategory =  require('./National_subject_categories-old.json');
+} else {
+    console.info("Configuring for production instance of DiVA")
+    kth_org = require('./kth-org-diva-new.json'); // organization tree
+    nationalSubjectCategory =  require('./National_subject_categories-new.json');
+}
+
 degree_info={
     "Level": {
 	// Level field:
@@ -3252,8 +3265,8 @@ async function main() {
 
     const page = await browser.newPage(); // creates a browser window and loads the URL "about:blank"
     await page.setViewport({
-	width: 1280,
-	height: 800,
+	width: width,
+	height: height,
 	deviceScaleFactor: 1,
     });
     
