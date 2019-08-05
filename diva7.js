@@ -10,7 +10,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 const config = require('./config.json'); // contains username and password to use
 const os = require('os');
-
+const { PendingXHR } = require('pending-xhr-puppeteer'); // to deal with AJAX requests
 
 const file_name = process.argv[2];
 if (!file_name) {
@@ -3257,6 +3257,8 @@ async function main() {
 	deviceScaleFactor: 1,
     });
     
+    const pendingXHR = new PendingXHR(page); // set up be able to wait for XHR responses
+
     // the following line makes it possible to see the console in the running browser
     page.on('console', msg => console.log('PAGE LOG:', msg.text()));
     // execute a commands in the browser - will generate "PAGE LOG: url is about:blank"
@@ -3518,22 +3520,41 @@ async function main() {
 	selector=make_selector_from_id(blanks['Presentation']['Room'].ID);
 	//await page.type(selector, room);
 	await page.click(selector, { clickCount: 1 })
-	await page.waitFor(1000);
+	// wait until the XHR requests/responses are done or 1 sec. has passed
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
 	await page.keyboard.sendCharacter(room);
 
-	await page.waitFor(1000);
+
+	//await page.waitFor(1000);
 	const address=thesis_info['Presentation']['Address'];
 	selector=make_selector_from_id(blanks['Presentation']['Address'].ID);
 	//await page.type(selector, address);
 	await page.click(selector);
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
+	//await page.waitFor(1000);
 	await page.keyboard.sendCharacter(address);
 
 	const city=thesis_info['Presentation']['City'];
 	selector=make_selector_from_id(blanks['Presentation']['City'].ID);
 	//await page.type(selector, city);
 	await page.click(selector);
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
+	//await page.waitFor(1000);
 	await page.keyboard.sendCharacter(city);
 	await page.waitFor(2000);
 
@@ -3893,7 +3914,12 @@ async function main() {
 		await setTextAreaLang(page, textareaHandles, areaNames, 'Title', lang_text);
 	    }
 	}
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
     }
     
     if (thesis_info.hasOwnProperty('Alternative title')) {
@@ -3913,7 +3939,12 @@ async function main() {
 		await setTextAreaLang(page, textareaHandles, areaNames, 'Alternative title', lang_text);
 	    }
 	}
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
     }
 
 
@@ -3963,7 +3994,12 @@ async function main() {
 		await setTextAreaLang(page, textareaHandles, areaNames, 'Abstract1', lang_text);
 	    }
 	}
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
     }
     
     if (thesis_info.hasOwnProperty('Abstract2')) {
@@ -3978,7 +4014,12 @@ async function main() {
 		await setTextAreaLang(page, textareaHandles, areaNames, 'Abstract2', lang_text);
 	    }
 	}
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
     }
 
     // Keywords
@@ -4037,7 +4078,12 @@ async function main() {
 	    //await page.$eval(selector, (el, value) => el.value = value, page_range);
 	    //await page.waitFor(1500);
 	    await page.click(selector);
-	    await page.waitFor(1000);
+	    await Promise.race([
+		pendingXHR.waitForAllXhrFinished(),
+		new Promise(resolve => {
+		    setTimeout(resolve, 1000);
+		}),
+	    ]);
 	    await page.keyboard.sendCharacter(page_range);
 	}
     }
@@ -4055,7 +4101,12 @@ async function main() {
 		//status=await page.$eval(selector, (el, value) => el.value = value, partner_name);
 		//console.info("status of setting partner_name is ", status, "selector was ", selector);
 		await page.click(selector);
-		await page.waitFor(500);
+		await Promise.race([
+		    pendingXHR.waitForAllXhrFinished(),
+		    new Promise(resolve => {
+			setTimeout(resolve, 1000);
+		    }),
+		]);
 		await page.keyboard.sendCharacter(partner_name);
 	    }
 	    let partner_name_check;
@@ -4072,7 +4123,12 @@ async function main() {
 	//selector='[id="addForm:extCoop:_2"]';
 	selector=make_selector_from_id(blanks['Cooperation']['false'].ID);
 	await page.click(selector); // No
-	await page.waitFor(1000);
+	await Promise.race([
+	    pendingXHR.waitForAllXhrFinished(),
+	    new Promise(resolve => {
+		setTimeout(resolve, 1000);
+	    }),
+	]);
     }
 
     // Notes
@@ -4172,7 +4228,12 @@ async function main() {
 			//    trita_number='2019:00';
 			//await page.$eval(selector, (el, value) => el.value = value, trita_number);
 			await page.click(selector);
-			await page.waitFor(1000);
+			await Promise.race([
+			    pendingXHR.waitForAllXhrFinished(),
+			    new Promise(resolve => {
+				setTimeout(resolve, 1000);
+			    }),
+			]);
 			await page.keyboard.sendCharacter(trita_number);
 		    } catch (error) {
 			console.info("did not get the No. in series entered")
@@ -4227,7 +4288,13 @@ async function main() {
     await makeNationalSubjectCategorySelection(page, blanks, 'National subject category');
     console.info("selected the national subject")
 
-    await page.waitFor(2000);
+    //await page.waitFor(2000);
+    await Promise.race([
+	pendingXHR.waitForAllXhrFinished(),
+	new Promise(resolve => {
+	    setTimeout(resolve, 1000);
+	}),
+    ]);
 
     let topbuttons;
     topbuttons = await forwardAndBackwardButtons(page);
@@ -4465,14 +4532,25 @@ async function main() {
 	    }
 	    console.info("make available later on ", thesis_info['File']['Available Date']);
 	    await page.click('[id="myForm:availableFromChoice:_2"]'); // later
-	    await page.waitFor('[id="myForm:availableFromDate"]'); // wait for the field to become available
-	    await page.waitFor(1000);
+	    await Promise.race([
+		pendingXHR.waitForAllXhrFinished(),
+		new Promise(resolve => {
+		    setTimeout(resolve, 1000);
+		}),
+	    ]);
 
+	    await page.waitFor('[id="myForm:availableFromDate"]'); // wait for the field to become available
 	    await page.$eval('[id="myForm:availableFromDate"]', (el, value) => el.value = value, dateTime);
 	    await page.focus('[id="myForm:availableFromDate"]');
 	    await page.keyboard.press('End'); // End Key
 	    await page.keyboard.press('Enter'); // Enter Key
-	    await page.waitFor(1000);
+	    //await page.waitFor(1000);
+	    await Promise.race([
+		pendingXHR.waitForAllXhrFinished(),
+		new Promise(resolve => {
+		    setTimeout(resolve, 1000);
+		}),
+	    ]);
 	} else {
 	    await page.click('[id="myForm:availableFromChoice:_1"]'); // now
 	}
@@ -4490,7 +4568,14 @@ async function main() {
 
     const fileInput = await iframe.$('#fileUploadForm input[name=upload]');
     status = await fileInput.uploadFile(thesis_info['File']['Filename']);
-    await page.waitFor(1000);
+    //await page.waitFor(1000);
+    await Promise.race([
+	pendingXHR.waitForAllXhrFinished(),
+	new Promise(resolve => {
+	    setTimeout(resolve, 1000);
+	}),
+    ]);
+
     console.info("status of file upload is ", status);
 
     // <div class="containerAddFile">
@@ -4523,7 +4608,14 @@ async function main() {
     await page.keyboard.press('Enter'); // Enter Key
     await page.click('[id="myForm:accept"]');
 
-    await page.waitFor(3000);
+    //await page.waitFor(3000);
+    await Promise.race([
+	pendingXHR.waitForAllXhrFinished(),
+	new Promise(resolve => {
+	    setTimeout(resolve, 1000);
+	}),
+    ]);
+
     topbuttons = await forwardAndBackwardButtons(page);
     console.info("topbuttons is ", topbuttons);
     console.info("topbuttons['heading_ids'][2] is ", topbuttons['heading_ids'][2]);
