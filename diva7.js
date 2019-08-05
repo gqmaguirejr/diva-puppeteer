@@ -11,6 +11,7 @@ const fs = require('fs');
 const config = require('./config.json'); // contains username and password to use
 const os = require('os');
 
+
 const file_name = process.argv[2];
 if (!file_name) {
     throw "Please provide a JSON with information about the thesis as the first argument";

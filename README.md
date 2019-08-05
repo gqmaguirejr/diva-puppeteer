@@ -67,12 +67,10 @@ Purpose: To enter a student thesis into DiVA
 Input:
 ```
 node diva7.js thesis_info.json
-
+```
 Output:
 Outputs a file containing the information that was loaded and the IDs of the input, select, textarea, buttons, etc. that were found.
 
 
 ### Notes:
 The program is a work in progress - extensive use of page.waitFor(time)
-
-
