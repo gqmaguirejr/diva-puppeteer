@@ -2396,7 +2396,7 @@ async function addTextArea(page, buttonHandles, textAreaName) {
     await page.click(selector);
     await page.waitFor(1000);
     await page.keyboard.sendCharacter(city);
-    await page.waitFor(2000);
+    await page.waitFor(1000);
     //await page.$eval('[id="addForm:j_id1347"]', (el, value) => el.value = value, city);
 
     let last_name;

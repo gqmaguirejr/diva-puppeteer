@@ -2851,7 +2851,7 @@ async function makeOrganizationSelection(page, blanks, textAreaName) {
 	    //console.info("tmp2 is ", tmp2, "tmp is", tmp);
 	    selector=make_selector_from_id('organisationPopupForm:tree-d-'+tmp)+' a';
 	    console.info("second level selector is ", selector);
-	    await page.waitFor(2000);
+	    await page.waitFor(1000);
 	    await page.waitFor(selector); // wait for the selector to be available
 	    await page.click(selector);
 	    //await page.waitFor(1500);
@@ -2860,8 +2860,7 @@ async function makeOrganizationSelection(page, blanks, textAreaName) {
 		tmp3=thesis_info[textAreaName]['organisation']['L3'];
 		tmp=kth_org[tmp1][tmp2][tmp3]['ID'];
 		//console.info("tmp3 is ", tmp3, "tmp is", tmp);
-		//selector=make_selector_from_id('organisationPopupForm:tree-d-'+tmp)+' a';
-		selector=make_prefix_selector_from_id('organisationPopupForm:tree:n-'+tmp)+' a';
+		selector=make_selector_from_id('organisationPopupForm:tree-d-'+tmp)+' a';
 		console.info("third level selector is ", selector);
 		await page.waitFor(2000);
 		await page.waitFor(selector); // wait for the selector to be available
@@ -3793,9 +3792,9 @@ async function makeNationalSubjectCategorySelection(page, blanks, textAreaName) 
 	    //selector='[id="addForm:j_id778:0:j_id780"]';
 	    selector=make_selector_from_id(blanks['Cooperation']['Partner_name'].ID);
 	    if (partner_name.length > 0) {
-		await page.$eval(selector, (el, value) => el.value = value, partner_name);
-		console.info("status of setting partner_name is ", status);
-		await page.waitFor(500);
+	    await page.$eval(selector, (el, value) => el.value = value, partner_name);
+	    console.info("status of setting partner_name is ", status);
+	    await page.waitFor(500);
 	    }
 	    let partner_name_check;
 	    // partner_name_check = await page.evaluate(() => {

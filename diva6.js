@@ -3189,29 +3189,11 @@ async function makeNationalSubjectCategorySelection(page, blanks, textAreaName) 
 
 //////////////////////////////////////////////////////////////////////
 // routines to divide up the main actions
-async function gotoTargePage(page, partialURL) {
+async function gotoTargePage(page, url) {
     const maximuAttempts=10;
-    const host_name=config.diva.host;
     for (let attemptNumber=0; attemptNumber < maximuAttempts; attemptNumber++) {
-	let pageFound;
-	const target_diva_url='https://'+host_name+partialURL
-	console.log("target_diva_url is ", target_diva_url);
-	await page.goto(target_diva_url, {waitUntil: 'load'});
-	pageFound=page.url();
-	console.log('FOUND!', pageFound);
-	if (pageFound == target_diva_url) {
-	    //This will produce: FOUND! https://kth.test.diva-portal.org/dream/add/add1.jsf
-	    // since the user is now logged in
-	    return true;
-	}
-	if (pageFound.startsWith('https://login.kth.se/login')) {
-	    await page.focus('#username');
-	    await page.type('#username', config.diva.username);
-	    await page.focus('#password');
-	}
-	await page.waitForNavigation();
+
     }
-    console.error("In gotoTargePage: failed to reach target ", partialURL, " after ", maximuAttempts, "tries");
 }
 
 //////////////////////////////////////////////////////////////////////
@@ -3219,6 +3201,7 @@ async function gotoTargePage(page, partialURL) {
 
 async function main() {
 
+    const host_name=config.diva.host
     let status;
     let selector;
 
@@ -3268,45 +3251,43 @@ async function main() {
 	});
 
 
-    // //diva1_url='http://'+host_name+'/dream/info.jsf'
-    // diva1_url='https://'+host_name+'/dream/add/add1.jsf'
-    // console.log("diva1_url is ", diva1_url);
-    // await page.goto(diva1_url, {waitUntil: 'load'});
-    // console.log('FOUND!', page.url());
-    // // This will produce: FOUND! https://saml-5.sys.kth.se/idp/profile/SAML2/Redirect/SSO?execution=e1s1
-    // // since the user is not yet logged in
+    //diva1_url='http://'+host_name+'/dream/info.jsf'
+    diva1_url='https://'+host_name+'/dream/add/add1.jsf'
+    console.log("diva1_url is ", diva1_url);
+    await page.goto(diva1_url, {waitUntil: 'load'});
+    console.log('FOUND!', page.url());
+    // This will produce: FOUND! https://saml-5.sys.kth.se/idp/profile/SAML2/Redirect/SSO?execution=e1s1
+    // since the user is not yet logged in
     
-    // await page.waitForNavigation();
+    await page.waitForNavigation();
 
-    // diva2_url='https://'+host_name+'/dream/add/add1.jsf'
-    // console.log("diva2_url is ", diva2_url);
-    // await page.goto(diva2_url, {waitUntil: 'load'});
-    // console.log('FOUND!', page.url());
-    // // This will produce: https://login.kth.se/login?service=https%3A%2F%2Fsaml-5.sys.kth.se%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fwww.diva-portal.org%2Fshibboleth
-    // if (await page.url().includes('https://login.kth.se/login')) {
-    // 	await page.focus('#username');
-    // 	await page.type('#username', config.diva.username);
-    // 	await page.focus('#password');
-    // }
-    // await page.waitForNavigation();
+    diva2_url='https://'+host_name+'/dream/add/add1.jsf'
+    console.log("diva2_url is ", diva2_url);
+    await page.goto(diva2_url, {waitUntil: 'load'});
+    console.log('FOUND!', page.url());
+    // This will produce: https://login.kth.se/login?service=https%3A%2F%2Fsaml-5.sys.kth.se%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fwww.diva-portal.org%2Fshibboleth
+    if (await page.url().includes('https://login.kth.se/login')) {
+	await page.focus('#username');
+	await page.type('#username', config.diva.username);
+	await page.focus('#password');
+    }
+    await page.waitForNavigation();
 
-    // // 2nd try
-    // //diva1_url='http://'+host_name+'/dream/info.jsf'
-    // diva1_url='https://'+host_name+'/dream/add/add1.jsf'
-    // console.log("diva1_url is ", diva1_url);
-    // await page.goto(diva1_url, {waitUntil: 'load'});
-    // console.log('FOUND!', page.url());
-    // // This will produce something line: FOUND! https://saml-5.sys.kth.se/idp/profile/SAML2/Redirect/SSO?SAMLRequest=xxxxxxx
+    // 2nd try
+    //diva1_url='http://'+host_name+'/dream/info.jsf'
+    diva1_url='https://'+host_name+'/dream/add/add1.jsf'
+    console.log("diva1_url is ", diva1_url);
+    await page.goto(diva1_url, {waitUntil: 'load'});
+    console.log('FOUND!', page.url());
+    // This will produce something line: FOUND! https://saml-5.sys.kth.se/idp/profile/SAML2/Redirect/SSO?SAMLRequest=xxxxxxx
     
-    // await page.waitForNavigation();
+    await page.waitForNavigation();
 
-    // // go to the page to add a publication
-    // diva_add_url='https://'+host_name+'/dream/add/add1.jsf'
-    // console.log("diva_add_url is ", diva_add_url);
-    // await page.goto(diva_add_url, {waitUntil: 'load'});
-    // console.log('FOUND!', page.url());
-    await gotoTargePage(page, '/dream/add/add1.jsf');
-
+    // go to the page to add a publication
+    diva_add_url='https://'+host_name+'/dream/add/add1.jsf'
+    console.log("diva_add_url is ", diva_add_url);
+    await page.goto(diva_add_url, {waitUntil: 'load'});
+    console.log('FOUND!', page.url());
     //This will produce: FOUND! https://kth.test.diva-portal.org/dream/add/add1.jsf
     // since the user is now logged in
 

@@ -4608,14 +4608,18 @@ async function main() {
     //   <div class="clear"></div></div>
 
     /// Uploaded file accept conditions
-    await page.waitFor('[id="myForm:j_id139"]');
+    //await page.waitFor('[id="myForm:j_id139"]');
+    await page.waitFor('[id="myForm:accept"]');
     //const accept_checkboxHandle = await page.$('[id="myForm:j_id139"]');
     //const accepted = await accept_checkboxHandle.click('[id="myForm:accept"]');
 
     if (thesis_info['File']['Accept full text']) {
 	const msg_to_diva_admin_selector='The student agreed to publication of the final report in DiVA.';
-	await page.type('[id="myForm:j_id175"]', msg_to_diva_admin_selector, {delay: 10});
+	//await page.type('[id="myForm:j_id175"]', msg_to_diva_admin_selector, {delay: 10});
+	
+	await page.type('div.diva2addfilelist textarea.iceInpTxtArea', msg_to_diva_admin_selector, {delay: 10});
     }
+
     // accept publication conditions
     await page.focus('[id="myForm:accept"]');
     await page.keyboard.press('Enter'); // Enter Key
