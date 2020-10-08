@@ -1092,7 +1092,7 @@ async function extractOrganizationInformation(page, blanks) {
             console.log('completed writing JSON information about DiVA');
 	});
 
-    } else [
+    } else {
 	
 	output_file_name='national-subject-catergory-data-'+current_date.toISOString()+'.json';
 	collected_data={'blanks': blanks, 'nationalSubjectCategory': nationalSubjectCategory};

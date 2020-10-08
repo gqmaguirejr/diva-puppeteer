@@ -864,7 +864,7 @@ async function extractOrganizationInformation(page, blanks) {
             if (err) throw err;
             console.log('completed writing JSON information about DiVA');
 	});
-    } else [
+    } else {
 	output_file_name='org-data-'+current_date.toISOString()+'.json';
 	collected_data={'blanks': blanks, 'kth_org': kth_org};
 	fs.writeFile(output_file_name, JSON.stringify(collected_data), function(err) {
